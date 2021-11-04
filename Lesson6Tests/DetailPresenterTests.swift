@@ -19,23 +19,23 @@ final class DetailPresenterTests: XCTestCase {
   }
 
   func testModelConsistency() {
-    let model = Artist(
+    let model = Model.Artist(
       identifier: 1111,
       name: "A",
       albums: [
-        Artist.Album(
+        Model.Artist.Album(
           name: "I",
           songs: [
-            Artist.Song(name: "I", duration: 1),
-            Artist.Song(name: "C", duration: 2),
-            Artist.Song(name: "J", duration: 2),
-            Artist.Song(name: "I", duration: 2),
-            Artist.Song(name: "I", duration: 3),
-            Artist.Song(name: "G", duration: 1),
-            Artist.Song(name: "O", duration: 1),
-            Artist.Song(name: "H", duration: 3),
-            Artist.Song(name: "H", duration: 2),
-            Artist.Song(name: "O", duration: 2)
+            Model.Artist.Song(name: "I", duration: 1),
+            Model.Artist.Song(name: "C", duration: 2),
+            Model.Artist.Song(name: "J", duration: 2),
+            Model.Artist.Song(name: "I", duration: 2),
+            Model.Artist.Song(name: "I", duration: 3),
+            Model.Artist.Song(name: "G", duration: 1),
+            Model.Artist.Song(name: "O", duration: 1),
+            Model.Artist.Song(name: "H", duration: 3),
+            Model.Artist.Song(name: "H", duration: 2),
+            Model.Artist.Song(name: "O", duration: 2)
           ],
           date: Date(timeIntervalSince1970: 5)
         )
@@ -52,6 +52,6 @@ final class DetailPresenterTests: XCTestCase {
   }
 
   func testViewOutput() {
-    XCTAssert(sut is DetailViewOutput)
+    XCTAssert(sut != nil)
   }
 }
